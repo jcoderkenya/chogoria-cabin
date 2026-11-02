@@ -49,6 +49,7 @@
     @media (prefers-reduced-motion: reduce) {
       * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
     }
+    .modal-hidden { display: none; }
   </style>
 </head>
 
@@ -138,7 +139,7 @@
   <main>
     <section id="home" class="relative min-h-[90vh] flex items-center bg-cabin-forest text-white overflow-hidden">
       <div class="absolute inset-0 z-0">
-        <img src="images/exterior.jpg" alt="Chogoria Cabin exterior" class="w-full h-full object-cover opacity-35 scale-105" onerror="this.src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1800&q=80';">
+        <img src="exterior.jpg.jpg" alt="Chogoria Cabin exterior" class="w-full h-full object-cover opacity-35 scale-105" onerror="this.src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1800&q=80';">
         <div class="absolute inset-0 bg-gradient-to-t from-cabin-forest via-cabin-forest/80 to-transparent"></div>
       </div>
 
@@ -268,13 +269,13 @@
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="rounded-3xl overflow-hidden shadow-soft border border-stone-200">
-              <img src="images/bedroom-double.jpg" alt="Double room" class="w-full h-72 object-cover" onerror="this.src='https://placehold.co/800x900/1B3528/FAF7F2?text=Bedroom';">
+              <img src="bedroom-double.jpg.jpg" alt="Double room" class="w-full h-72 object-cover" onerror="this.src='https://placehold.co/800x900/1B3528/FAF7F2?text=Bedroom';">
             </div>
             <div class="rounded-3xl overflow-hidden shadow-soft border border-stone-200">
-              <img src="images/bedroom-bunks.jpg" alt="Family room" class="w-full h-72 object-cover" onerror="this.src='https://placehold.co/800x900/1B3528/FAF7F2?text=Family+Room';">
+              <img src="bedroom-bunks.jpg.jpg" alt="Family room" class="w-full h-72 object-cover" onerror="this.src='https://placehold.co/800x900/1B3528/FAF7F2?text=Family+Room';">
             </div>
             <div class="rounded-3xl overflow-hidden shadow-soft border border-stone-200 sm:col-span-2">
-              <img src="images/exterior.jpg" alt="Cabin exterior" class="w-full h-80 object-cover" onerror="this.src='https://placehold.co/1200x800/1B3528/FAF7F2?text=Chogoria+Cabin';">
+              <img src="exterior.jpg.jpg" alt="Cabin exterior" class="w-full h-80 object-cover" onerror="this.src='https://placehold.co/1200x800/1B3528/FAF7F2?text=Chogoria+Cabin';">
             </div>
           </div>
         </div>
@@ -291,7 +292,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <div class="bg-white rounded-3xl overflow-hidden border border-stone-200 shadow-soft">
             <div class="relative h-64">
-              <img src="images/bedroom-double.jpg" alt="Standard double room" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x500/1B3528/FAF7F2?text=Standard+Room';">
+              <img src="bedroom-double.jpg.jpg" alt="Standard double room" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x500/1B3528/FAF7F2?text=Standard+Room';">
               <span class="absolute top-4 left-4 bg-cabin-bookingBlue text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-[0.18em]">
                 Booking.com
               </span>
@@ -333,7 +334,7 @@
             </span>
 
             <div class="relative h-64">
-              <img src="images/bedroom-bunks.jpg" alt="Family and group room" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x500/1B3528/FAF7F2?text=Family+Room';">
+              <img src="bedroom-bunks.jpg.jpg" alt="Family and group room" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x500/1B3528/FAF7F2?text=Family+Room';">
             </div>
 
             <div class="p-7">
@@ -368,6 +369,45 @@
         </div>
       </div>
     </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-r from-cabin-forest to-cabin-forestLight rounded-[2rem] p-8 text-white shadow-soft">
+          <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <div class="inline-flex items-center rounded-full border border-white/20 bg-white/5 px-3 py-1 text-[10px] uppercase tracking-[0.22em] text-cabin-gold font-bold">
+                Featured review
+              </div>
+              <h3 class="font-serif text-3xl sm:text-4xl font-bold mt-4">“A wonderfully peaceful mountain hideaway.”</h3>
+              <p class="mt-3 text-stone-200 max-w-xl leading-relaxed">
+                “The cabin felt private, warm and beautifully calm. We loved the birdlife, the space, and the fresh air every morning.”
+              </p>
+            </div>
+            <div class="text-center md:text-right">
+              <p class="text-sm font-medium text-stone-200">Diane Priestley</p>
+              <button id="openReviewModal" class="mt-4 inline-flex items-center justify-center gap-2 bg-cabin-gold hover:bg-cabin-goldHover text-stone-950 font-bold px-6 py-3 rounded-full text-[10px] uppercase tracking-[0.18em] transition-colors">
+                Read full review
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="reviewModal" class="fixed inset-0 z-50 hidden bg-stone-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+      <div class="bg-white rounded-[2rem] max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative">
+        <button id="closeReviewModal" class="absolute top-4 right-4 text-stone-500 hover:text-stone-900 text-2xl font-light">×</button>
+        <div class="text-[10px] uppercase tracking-[0.22em] text-cabin-gold font-bold">Featured review</div>
+        <h3 class="font-serif text-3xl font-bold text-cabin-forest mt-3">“Three sublime months...”</h3>
+        <p class="mt-5 text-stone-600 leading-relaxed">
+          “Sitting with a cuppa on the balcony listening to birds sing while gazing across the valley was unforgettable. The cabin is cosy, private, and wonderful for remote work. We loved the quiet, the fresh air, and the gentle pace of the mountain. It felt like a reset button for the mind and body.”
+        </p>
+        <div class="mt-6 pt-4 border-t border-stone-200">
+          <span class="font-bold text-stone-900">Diane Priestley</span><br>
+          <span class="text-xs text-stone-500">UK Journalist · 3-month stay</span>
+        </div>
+      </div>
+    </div>
 
     <section id="payments" class="py-20 bg-white border-y border-stone-200">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -546,28 +586,28 @@
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div class="rounded-2xl overflow-hidden border border-stone-200 shadow-sm">
-            <img src="images/exterior.jpg" alt="Cabin exterior" class="w-full h-56 object-cover" onerror="this.src='https://placehold.co/600x600/1B3528/FAF7F2?text=Exterior';">
+            <img src="exterior.jpg.jpg" alt="Cabin exterior" class="w-full h-56 object-cover" onerror="this.src='https://placehold.co/600x600/1B3528/FAF7F2?text=Exterior';">
           </div>
           <div class="rounded-2xl overflow-hidden border border-stone-200 shadow-sm">
-            <img src="images/bedroom-double.jpg" alt="Double bedroom" class="w-full h-56 object-cover" onerror="this.src='https://placehold.co/600x600/1B3528/FAF7F2?text=Bedroom';">
+            <img src="bedroom-double.jpg.jpg" alt="Double bedroom" class="w-full h-56 object-cover" onerror="this.src='https://placehold.co/600x600/1B3528/FAF7F2?text=Bedroom';">
           </div>
           <div class="rounded-2xl overflow-hidden border border-stone-200 shadow-sm">
-            <img src="images/bedroom-bunks.jpg" alt="Bunk room" class="w-full h-56 object-cover" onerror="this.src='https://placehold.co/600x600/1B3528/FAF7F2?text=Bunk+Room';">
+            <img src="bedroom-bunks.jpg.jpg" alt="Bunk room" class="w-full h-56 object-cover" onerror="this.src='https://placehold.co/600x600/1B3528/FAF7F2?text=Bunk+Room';">
           </div>
           <div class="rounded-2xl overflow-hidden border border-stone-200 shadow-sm">
-            <img src="images/living-room.jpg" alt="Living room" class="w-full h-56 object-cover" onerror="this.src='https://placehold.co/600x600/1B3528/FAF7F2?text=Living+Room';">
+            <img src="living-room.jpg.jpg" alt="Living room" class="w-full h-56 object-cover" onerror="this.src='https://placehold.co/600x600/1B3528/FAF7F2?text=Living+Room';">
           </div>
           <div class="rounded-2xl overflow-hidden border border-stone-200 shadow-sm">
-            <img src="images/kitchen.jpg" alt="Kitchen" class="w-full h-56 object-cover" onerror="this.src='https://placehold.co/600x600/1B3528/FAF7F2?text=Kitchen';">
+            <img src="kitchen.jpg.jpg" alt="Kitchen" class="w-full h-56 object-cover" onerror="this.src='https://placehold.co/600x600/1B3528/FAF7F2?text=Kitchen';">
           </div>
           <div class="rounded-2xl overflow-hidden border border-stone-200 shadow-sm">
-            <img src="images/garden.jpg" alt="Garden" class="w-full h-56 object-cover" onerror="this.src='https://placehold.co/600x600/1B3528/FAF7F2?text=Garden';">
+            <img src="garden.jpg.jpg" alt="Garden" class="w-full h-56 object-cover" onerror="this.src='https://placehold.co/600x600/1B3528/FAF7F2?text=Garden';">
           </div>
           <div class="rounded-2xl overflow-hidden border border-stone-200 shadow-sm">
-            <img src="images/bathroom.jpg" alt="Bathroom" class="w-full h-56 object-cover" onerror="this.src='https://placehold.co/600x600/1B3528/FAF7F2?text=Bathroom';">
+            <img src="bathroom.jpg.jpg" alt="Bathroom" class="w-full h-56 object-cover" onerror="this.src='https://placehold.co/600x600/1B3528/FAF7F2?text=Bathroom';">
           </div>
           <div class="rounded-2xl overflow-hidden border border-stone-200 shadow-sm">
-            <img src="images/tree-shelf.jpg" alt="Tree shelf detail" class="w-full h-56 object-cover" onerror="this.src='https://placehold.co/600x600/1B3528/FAF7F2?text=Detail';">
+            <img src="tree-shelf.jpg.jpg" alt="Tree shelf detail" class="w-full h-56 object-cover" onerror="this.src='https://placehold.co/600x600/1B3528/FAF7F2?text=Detail';">
           </div>
         </div>
       </div>
@@ -610,7 +650,13 @@
 
           <div class="lg:col-span-7">
             <div class="rounded-3xl overflow-hidden border border-stone-300 shadow-soft">
-              <img src="images/exterior.jpg" alt="Cabin location" class="w-full h-[420px] object-cover" onerror="this.src='https://placehold.co/1200x800/1B3528/FAF7F2?text=Location+Map';">
+              <iframe
+                title="Chogoria Cabin map"
+                src="https://www.google.com/maps?q=Chogoria%20Kenya&z=12&output=embed"
+                class="w-full h-[420px] border-0"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
         </div>
@@ -700,6 +746,24 @@
       mobileMenu.classList.toggle('hidden');
     }
     mobileMenuBtn?.addEventListener('click', toggleMobileMenu);
+
+    const reviewModal = document.getElementById('reviewModal');
+    const openReviewModal = document.getElementById('openReviewModal');
+    const closeReviewModal = document.getElementById('closeReviewModal');
+
+    openReviewModal?.addEventListener('click', () => {
+      reviewModal.classList.remove('hidden');
+    });
+
+    closeReviewModal?.addEventListener('click', () => {
+      reviewModal.classList.add('hidden');
+    });
+
+    reviewModal?.addEventListener('click', (event) => {
+      if (event.target === reviewModal) {
+        reviewModal.classList.add('hidden');
+      }
+    });
 
     function copyToClipboard(text, message) {
       navigator.clipboard.writeText(text).then(() => {
