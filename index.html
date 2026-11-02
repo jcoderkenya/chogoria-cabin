@@ -1,487 +1,1027 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Afrocentric Arts and Crafts | Chogoria Cabin | Mt. Kenya Retreat</title>
-    <meta
-      name="description"
-      content="Afrocentric Arts and Crafts presents Chogoria Cabin — a peaceful mountain retreat on the slopes of Mt. Kenya, with birdlife, great views, warm hospitality, and easy booking via WhatsApp, Booking.com, M-Pesa and bank transfer."
-    />
-    <meta
-      name="keywords"
-      content="Chogoria Cabin, Mt Kenya getaway, Kenya retreat, bird watching, mountain cabin, booking, M-Pesa, KCB Paybill"
-    />
-    <meta property="og:title" content="Afrocentric Arts and Crafts | Chogoria Cabin" />
-    <meta
-      property="og:description"
-      content="A tranquil rustic retreat on the slopes of Mount Kenya with birdlife, scenic views, and comfortable cabin accommodation."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="images/exterior.jpg" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chogoria Cabin | Afrocentric Arts and Crafts — Slopes of Mt. Kenya</title>
+  <meta name="description" content="Chogoria Cabin by Afrocentric Arts and Crafts. Ideal for visitors seeking rest in a tranquil, natural environment with trees, birds and a great vista on the slopes of Mt. Kenya." />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Social Media Sharing Meta -->
+  <meta property="og:title" content="Chogoria Cabin — Afrocentric Arts and Crafts, Mt. Kenya" />
+  <meta property="og:description" content="A tranquil, rustic retreat on the slopes of Mt. Kenya. Reserve on Booking.com or direct via WhatsApp, M-Pesa, and KCB Bank transfer." />
+  <meta property="og:type" content="website" />
 
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              cabin: {
-                forest: '#1B3528',
-                forestLight: '#2A4D3B',
-                wood: '#7A4D2E',
-                woodLight: '#96633E',
-                gold: '#C59A45',
-                goldHover: '#B08836',
-                bookingBlue: '#003580',
-                bookingLight: '#006CE4',
-                cream: '#FAF7F2',
-                ivory: '#F3EDE2',
-                charcoal: '#1F2923',
-                card: '#FFFFFF',
-                soft: '#ECF3EC'
-              }
-            },
-            fontFamily: {
-              serif: ['"Cormorant Garamond"', 'serif'],
-              sans: ['"Plus Jakarta Sans"', 'sans-serif']
-            },
-            boxShadow: {
-              soft: '0 12px 30px rgba(27, 53, 40, 0.12)'
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cabin: {
+              forest: '#1B3528',
+              forestLight: '#2A4D3B',
+              wood: '#7A4D2E',
+              woodLight: '#96633E',
+              gold: '#C59A45',
+              goldHover: '#B08836',
+              bookingBlue: '#003580',
+              bookingLight: '#006CE4',
+              cream: '#FAF7F2',
+              ivory: '#F3EDE2',
+              charcoal: '#1F2923',
+              card: '#FFFFFF'
             }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
           }
         }
-      };
-    </script>
+      }
+    }
+  </script>
 
-    <style>
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 5.5rem;
-      }
-      body {
-        background-color: #faf7f2;
-      }
-      .image-fallback {
-        background: linear-gradient(135deg, #1b3528 0%, #2a4d3b 100%);
-      }
-      .glass {
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-      }
-      .section-shell {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-      .gold-divider {
-        height: 3px;
-        width: 110px;
-        background: linear-gradient(90deg, #c59a45 0%, rgba(197, 154, 69, 0.45) 100%);
-        border-radius: 9999px;
-      }
-      .review-stars {
-        letter-spacing: 0.12em;
-      }
-      .hover-lift {
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
-      }
-      .hover-lift:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 20px 38px rgba(17, 24, 39, 0.08);
-      }
-      .map-placeholder {
-        background:
-          linear-gradient(rgba(27,53,40,0.1), rgba(27,53,40,0.08)),
-          url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-      }
-    </style>
-  </head>
+  <style>
+    html {
+      scroll-padding-top: 5rem;
+    }
+    .image-fallback {
+      background: linear-gradient(135deg, #1B3528 0%, #2A4D3B 100%);
+    }
+  </style>
+</head>
+<body class="bg-cabin-cream text-cabin-charcoal font-sans antialiased selection:bg-cabin-gold selection:text-white">
 
-  <body class="bg-cabin-cream text-cabin-charcoal font-sans antialiased selection:bg-cabin-gold selection:text-white">
-    <script>
-      window.siteConfig = {
-        businessName: 'Afrocentric Arts and Crafts',
-        propertyName: 'Chogoria Cabin',
-        tagline: 'Natural Peace • Trees, Birds & Great Vistas • Warm Hospitality',
-        host: 'Obadiah',
-        contacts: {
-          phoneDisplay: '0724 236 400',
-          phoneInt: '+254 724 236 400',
-          whatsappRaw: '254724236400',
-          email: 'chogoriacabin@gmail.com'
-        },
-        bookingComUrl: 'https://www.booking.com/hotel/ke/chogoria-cabin.html',
-        payment: {
-          kcbPaybill: '522533',
-          accountNo: '8075179',
-          businessName: 'AFROCENTRIC ARTS & CRAFTS ENTERPRISE',
-          kcbBankAccount: '1350453021',
-          bankName: 'KCB Bank'
-        },
-        rates: {
-          resident: 'KSh 5,000',
-          nonResident: '$50 USD',
-          period: 'per night',
-          note: 'Entire cabin / direct booking'
-        },
-        location: {
-          town: 'Chogoria, Tharaka-Nithi County, Kenya',
-          slopes: 'On the Slopes of Mt. Kenya',
-          googleMapsLink: 'https://maps.app.goo.gl/oppzrdvy1RZucp4a9'
-        }
-      };
-    </script>
+  <!-- ========================================== -->
+  <!-- CONFIGURATION OBJECT                       -->
+  <!-- ========================================== -->
+  <script>
+    window.siteConfig = {
+      propertyName: "Chogoria Cabin",
+      enterpriseName: "Afrocentric Arts and Crafts",
+      tagline: "Natural Peace • Trees, Birds & Great Vistas • Warm Hospitality",
+      contacts: {
+        phoneDisplay: "0724 236 400",
+        phoneInt: "+254 724 236 400",
+        whatsappRaw: "254724236400",
+        email: "chogoriacabin@gmail.com"
+      },
+      bookingComUrl: "https://www.booking.com/hotel/ke/chogoria-cabin.html",
+      payment: {
+        kcbPaybill: "522533",
+        accountNo: "8075179",
+        businessName: "AFROCENTRIC ARTS & CRAFTS ENTERPRISE",
+        kcbBankAccount: "1350453021",
+        bankName: "KCB Bank"
+      },
+      rates: {
+        resident: "KSh 5,000",
+        nonResident: "$50 USD",
+        period: "per night"
+      },
+      location: {
+        town: "Chogoria, Tharaka-Nithi County, Kenya",
+        slopes: "On the Slopes of Mt. Kenya",
+        googleMapsLink: "https://maps.app.goo.gl/oppzrdvy1RZucp4a9"
+      }
+    };
+  </script>
 
-    <div class="bg-cabin-forest text-stone-200 py-2 px-4 text-center text-[11px] tracking-[0.22em] uppercase font-medium">
-      Afrocentric Arts and Crafts • Chogoria Cabin • Slopes of Mt. Kenya
+  <!-- ========================================== -->
+  <!-- TOP BANNER                                 -->
+  <!-- ========================================== -->
+  <div class="bg-cabin-forest text-stone-200 py-2 px-4 text-center text-xs tracking-wider uppercase font-medium flex items-center justify-center gap-2 border-b border-cabin-gold/30">
+    <span class="inline-block w-2 h-2 rounded-full bg-cabin-gold animate-pulse"></span>
+    <span>Chogoria Cabin · By Afrocentric Arts and Crafts · On the Slopes of Mt. Kenya</span>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- NAVIGATION BAR                             -->
+  <!-- ========================================== -->
+  <header class="sticky top-0 z-40 bg-cabin-cream/95 backdrop-blur-md border-b border-stone-200 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo (Chogoria Cabin on Top, Afrocentric Arts and Crafts Underneath) -->
+      <a href="#home" class="flex flex-col group">
+        <span class="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-cabin-forest group-hover:text-cabin-wood transition-colors">
+          CHOGORIA CABIN
+        </span>
+        <span class="text-[10px] uppercase tracking-widest text-cabin-gold font-bold -mt-1">
+          By Afrocentric Arts and Crafts · Slopes of Mt. Kenya
+        </span>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium text-stone-700">
+        <a href="#home" class="hover:text-cabin-wood transition-colors">Home</a>
+        <a href="#booking-section" class="text-cabin-bookingLight font-semibold hover:text-cabin-bookingBlue transition-colors flex items-center gap-1">
+          <span>Booking.com Rates</span>
+        </a>
+        <a href="#about" class="hover:text-cabin-wood transition-colors">The Cabin</a>
+        <a href="#rooms" class="hover:text-cabin-wood transition-colors">Room Types</a>
+        <a href="#video-tour" class="hover:text-cabin-wood transition-colors">Video Tour</a>
+        <a href="#payments" class="hover:text-cabin-wood transition-colors">Payment Options</a>
+        <a href="#reviews" class="hover:text-cabin-wood transition-colors">Guest Reviews</a>
+        <a href="#location" class="hover:text-cabin-wood transition-colors">Location</a>
+      </nav>
+
+      <!-- Desktop CTAs -->
+      <div class="hidden sm:flex items-center space-x-3">
+        <a 
+          href="https://www.booking.com/hotel/ke/chogoria-cabin.html" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="inline-flex items-center gap-2 bg-cabin-bookingBlue hover:bg-cabin-bookingLight text-white px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition-all shadow-sm"
+        >
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm2 4v2h12V8H6zm0 4v4h4v-4H6zm6 0v4h6v-4h-6z"/></svg>
+          Booking.com
+        </a>
+        <a 
+          href="https://wa.me/254724236400?text=Hello%20Chogoria%20Cabin,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20stay." 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="inline-flex items-center gap-2 bg-cabin-forest text-white px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase hover:bg-cabin-forestLight transition-all border border-cabin-gold/40 shadow-sm"
+        >
+          <svg class="w-3.5 h-3.5 text-emerald-400 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.297.144.35.49 1.199.534 1.286.044.087.073.189.014.305-.058.115-.088.19-.174.29-.087.101-.183.226-.262.304-.087.087-.179.183-.077.358.101.174.451.745.968 1.206.666.594 1.228.777 1.402.864.174.088.276.073.378-.044.102-.116.434-.506.55-.68.116-.174.232-.145.39-.087s1.011.477 1.184.564.29.13.333.203c.043.072.043.42-.101.825z"/></svg>
+          0724 236 400
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobileMenuBtn" aria-label="Toggle Navigation" class="lg:hidden text-cabin-forest p-2 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
     </div>
 
-    <header class="sticky top-0 z-40 bg-cabin-cream/95 glass border-b border-stone-200">
-      <div class="section-shell h-20 flex items-center justify-between">
-        <a href="#home" class="flex flex-col group">
-          <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-cabin-forest group-hover:text-cabin-wood transition-colors">
-            AFROCENTRIC ARTS & CRAFTS
-          </span>
-          <span class="text-[10px] uppercase tracking-[0.24em] text-cabin-gold font-bold -mt-1">
-            Chogoria Cabin • Slopes of Mt. Kenya
-          </span>
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-cabin-ivory border-b border-stone-200 px-6 py-6 space-y-4">
+      <a href="#home" class="block text-base font-medium text-stone-800 py-1" onclick="toggleMobileMenu()">Home</a>
+      <a href="#booking-section" class="block text-base font-bold text-cabin-bookingLight py-1" onclick="toggleMobileMenu()">Booking.com Rates</a>
+      <a href="#about" class="block text-base font-medium text-stone-800 py-1" onclick="toggleMobileMenu()">The Cabin & Nature</a>
+      <a href="#rooms" class="block text-base font-medium text-stone-800 py-1" onclick="toggleMobileMenu()">Room Configurations</a>
+      <a href="#video-tour" class="block text-base font-medium text-stone-800 py-1" onclick="toggleMobileMenu()">Video Tour</a>
+      <a href="#payments" class="block text-base font-medium text-stone-800 py-1" onclick="toggleMobileMenu()">Paybill & Bank Details</a>
+      <a href="#reviews" class="block text-base font-medium text-stone-800 py-1" onclick="toggleMobileMenu()">Guest Reviews</a>
+      <a href="#location" class="block text-base font-medium text-stone-800 py-1" onclick="toggleMobileMenu()">Location & Map</a>
+      <div class="pt-4 border-t border-stone-300 space-y-2">
+        <a 
+          href="https://www.booking.com/hotel/ke/chogoria-cabin.html" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="w-full flex items-center justify-center gap-2 bg-cabin-bookingBlue text-white py-3 rounded-xl font-bold text-sm"
+        >
+          Check Rates on Booking.com
         </a>
+        <a 
+          href="https://wa.me/254724236400?text=Hello%20Chogoria%20Cabin,%20I%20would%20like%20to%20book." 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="w-full flex items-center justify-center gap-2 bg-cabin-forest text-white py-3 rounded-xl font-bold text-sm"
+        >
+          WhatsApp: 0724 236 400
+        </a>
+      </div>
+    </div>
+  </header>
 
-        <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium text-stone-700">
-          <a href="#home" class="hover:text-cabin-wood transition-colors">Home</a>
-          <a href="#about" class="hover:text-cabin-wood transition-colors">About</a>
-          <a href="#amenities" class="hover:text-cabin-wood transition-colors">Amenities</a>
-          <a href="#rates" class="hover:text-cabin-wood transition-colors">Rates</a>
-          <a href="#reviews" class="hover:text-cabin-wood transition-colors">Reviews</a>
-          <a href="#contact" class="hover:text-cabin-wood transition-colors">Contact</a>
-        </nav>
+  <main>
+    <!-- ========================================== -->
+    <!-- HERO SECTION                               -->
+    <!-- ========================================== -->
+    <section id="home" class="relative min-h-[90vh] flex items-center bg-cabin-forest text-white overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="exterior.jpg.jpg" 
+          alt="Chogoria Cabin by Afrocentric Arts and Crafts on the slopes of Mt. Kenya" 
+          class="w-full h-full object-cover opacity-35 scale-105 transition-transform duration-1000 ease-out"
+          onerror="this.src='https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80';"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-cabin-forest via-cabin-forest/75 to-transparent"></div>
+      </div>
 
-        <div class="flex items-center gap-3">
-          <a
-            href="https://wa.me/254724236400?text=Hello%20Chogoria%20Cabin%2C%20I%20would%20like%20to%20book%20a%20stay."
-            class="hidden sm:inline-flex items-center justify-center px-4 py-2.5 rounded-full bg-cabin-forest text-white text-sm font-semibold hover:bg-cabin-wood transition-colors"
+      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cabin-gold/20 border border-cabin-gold/40 text-cabin-gold text-xs uppercase tracking-widest font-bold mb-6">
+          Chogoria Cabin · By Afrocentric Arts and Crafts
+        </span>
+
+        <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-tight text-stone-50 max-w-4xl mx-auto">
+          A Tranquil, Rustic Retreat on the Slopes of Mt. Kenya.
+        </h1>
+
+        <p class="mt-6 text-lg sm:text-xl text-stone-200 max-w-2xl mx-auto font-light leading-relaxed">
+          Chogoria Cabin (by Afrocentric Arts and Crafts) is ideal for visitors who wish for a rest in a natural, tranquil environment with trees, birds and a great vista.
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <div class="bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-xl text-center">
+            <span class="text-[10px] text-stone-300 uppercase block tracking-wider">Booking.com Verified</span>
+            <span class="font-bold text-sm text-white">Standard & Family Rooms</span>
+          </div>
+          <div class="bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-xl text-center">
+            <span class="text-[10px] text-stone-300 uppercase block tracking-wider">Kenyan Residents</span>
+            <span class="font-bold text-base text-white">KSh 5,000 / night</span>
+          </div>
+          <div class="bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-xl text-center">
+            <span class="text-[10px] text-stone-300 uppercase block tracking-wider">Non-Residents</span>
+            <span class="font-bold text-base text-cabin-gold">$50 USD / night</span>
+          </div>
+          <div class="bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-xl text-center">
+            <span class="text-[10px] text-emerald-300 uppercase block tracking-wider">Fast Wi-Fi & Work Desk</span>
+            <span class="font-semibold text-xs text-white">Visa · Mastercard · M-Pesa</span>
+          </div>
+        </div>
+
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a 
+            href="https://www.booking.com/hotel/ke/chogoria-cabin.html" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-cabin-bookingLight hover:bg-cabin-bookingBlue text-white font-bold px-8 py-4 rounded-full text-sm uppercase tracking-wider transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 border border-white/20"
           >
-            Book on WhatsApp
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm2 4v2h12V8H6zm0 4v4h4v-4H6zm6 0v4h6v-4h-6z"/></svg>
+            Check Real-Time Rates & Availability on Booking.com
           </a>
-          <a
-            href="https://www.booking.com/hotel/ke/chogoria-cabin.html"
-            target="_blank"
-            rel="noopener"
-            class="inline-flex items-center justify-center px-4 py-2.5 rounded-full border border-cabin-gold text-cabin-forest text-sm font-semibold hover:bg-cabin-gold hover:text-white transition-colors"
+          <a 
+            href="https://wa.me/254724236400?text=Hello%20Chogoria%20Cabin,%20I%20would%20like%20to%20book%20a%20stay." 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-medium px-8 py-4 rounded-full text-sm uppercase tracking-wider backdrop-blur-sm border border-white/20 transition-all"
           >
-            Booking.com
+            Direct WhatsApp Booking
           </a>
+        </div>
+
+        <p class="mt-12 text-xs uppercase tracking-widest text-stone-300 font-medium">
+          Birdwatching • Mount Kenya Safaris • Private Fenced Garden • Remote Work Wi-Fi
+        </p>
+      </div>
+    </section>
+
+    <section id="booking-section" class="py-12 bg-white border-b border-stone-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-r from-cabin-bookingBlue to-cabin-bookingLight rounded-3xl p-6 sm:p-10 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="space-y-2 text-center md:text-left">
+            <div class="inline-flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-amber-300 border border-white/20">
+              Official Booking.com Property Listing
+            </div>
+            <h2 class="font-serif text-2xl sm:text-4xl font-bold">Book Instantly with Live Availability</h2>
+            <p class="text-stone-200 text-xs sm:text-sm max-w-xl leading-relaxed">
+              Prefer guaranteed reservations, card checkout, or flexible cancellation? View our live calendar, verified guest ratings, and seasonal rates directly on Booking.com.
+            </p>
+          </div>
+          <div class="shrink-0 w-full md:w-auto text-center">
+            <a 
+              href="https://www.booking.com/hotel/ke/chogoria-cabin.html" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="w-full md:w-auto inline-flex items-center justify-center gap-3 bg-amber-400 hover:bg-amber-300 text-stone-950 font-bold px-8 py-4 rounded-full text-xs uppercase tracking-wider transition-all shadow-md transform hover:scale-105"
+            >
+              Check Real-Time Rates & Availability on Booking.com
+              <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+            <span class="block text-[11px] text-stone-200 mt-2 font-mono">Instant confirmation · Visa & Mastercard</span>
+          </div>
         </div>
       </div>
-    </header>
+    </section>
 
-    <main id="home">
-      <section class="relative overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(197,154,69,0.18),_transparent_38%)]"></div>
-        <div class="section-shell relative py-8 md:py-12 lg:py-16">
-          <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 items-center">
+    <section id="about" class="py-20 bg-cabin-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-cabin-wood uppercase text-xs tracking-widest font-bold">Chogoria Cabin · Afrocentric Arts and Crafts</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-cabin-forest mt-2">Natural Peace on the Mountain Slopes</h2>
+          <p class="mt-4 text-stone-600 text-base leading-relaxed">
+            Constructed with rustic dark timber and warm wooden finishes, Chogoria Cabin is situated within a secure, fenced compound surrounded by trees, vibrant birdlife, and sweeping vistas across the slopes of Mt. Kenya.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-stone-200">
+            <div class="w-10 h-10 rounded-xl bg-cabin-forest/10 text-cabin-forest flex items-center justify-center mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-stone-900">Serene Timber Haven</h3>
+            <p class="text-stone-600 text-xs mt-2 leading-relaxed">Fully furnished wooden guesthouse with private veranda, dining nook, and tranquil mountain air.</p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-stone-200">
+            <div class="w-10 h-10 rounded-xl bg-cabin-forest/10 text-cabin-forest flex items-center justify-center mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-stone-900">High-Speed Wi-Fi</h3>
+            <p class="text-stone-600 text-xs mt-2 leading-relaxed">Stable internet and workspace for remote professionals, writers, and travelers wanting to stay connected.</p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-stone-200">
+            <div class="w-10 h-10 rounded-xl bg-cabin-forest/10 text-cabin-forest flex items-center justify-center mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-stone-900">Self-Catering Kitchen</h3>
+            <p class="text-stone-600 text-xs mt-2 leading-relaxed">Equipped with 2-burner gas stove, mini-fridge, tea kettle, pots, and tableware for fresh farm meals.</p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-stone-200">
+            <div class="w-10 h-10 rounded-xl bg-cabin-forest/10 text-cabin-forest flex items-center justify-center mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-stone-900">Walk-in Hot Shower</h3>
+            <p class="text-stone-600 text-xs mt-2 leading-relaxed">Instant hot water shower, two washbasins, and flushing toilet for total comfort after a long day of hiking.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rooms" class="py-20 bg-cabin-ivory">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-cabin-wood uppercase text-xs tracking-widest font-bold">Chogoria Cabin Rooms</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-cabin-forest mt-2">Accommodations Matching Our Booking.com Listing</h2>
+          <p class="mt-4 text-stone-600 text-base">Select your ideal setup. Book through Booking.com or reserve directly via M-Pesa & Bank Transfer.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-stone-200 flex flex-col justify-between">
             <div>
-              <p class="inline-flex items-center gap-2 rounded-full border border-cabin-gold/50 bg-white/80 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-cabin-forest">
-                <span class="inline-block w-2 h-2 rounded-full bg-cabin-gold"></span>
-                Private Highland Retreat
-              </p>
-              <h1 class="mt-6 font-serif text-5xl md:text-6xl lg:text-7xl leading-none text-cabin-forest">
-                Peaceful stays on the slopes of Mt. Kenya.
-              </h1>
-              <p class="mt-5 max-w-xl text-lg text-stone-700 leading-relaxed">
-                Chogoria Cabin offers a calm, rustic escape surrounded by trees, birds, and sweeping hill views — ideal for couples, families, and groups looking for rest, nature, and genuine hospitality.
-              </p>
-
-              <div class="mt-8 flex flex-wrap items-center gap-4">
-                <a
-                  href="https://wa.me/254724236400?text=Hello%20Chogoria%20Cabin%2C%20I%20would%20like%20to%20book%20a%20stay."
-                  class="inline-flex items-center justify-center rounded-full bg-cabin-forest px-6 py-3 text-sm font-semibold text-white hover:bg-cabin-wood transition-colors"
-                >
-                  Reserve via WhatsApp
-                </a>
-                <a
-                  href="#booking-section"
-                  class="inline-flex items-center justify-center rounded-full border border-cabin-gold bg-white px-6 py-3 text-sm font-semibold text-cabin-forest hover:bg-cabin-gold hover:text-white transition-colors"
-                >
-                  View payment details
-                </a>
+              <div class="relative h-64 overflow-hidden bg-stone-200">
+                <img 
+                  src="bedroom-double.jpg.jpg" 
+                  alt="Standard Double Room at Chogoria Cabin (1 Full Bed)" 
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  onerror="this.src='https://placehold.co/800x500/1B3528/FAF7F2?text=Standard+Double+Room';"
+                />
+                <span class="absolute top-4 left-4 bg-cabin-bookingBlue text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                  Booking.com Option
+                </span>
+                <span class="absolute top-4 right-4 bg-white/90 text-stone-900 text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-xs">
+                  1 Full Bed · 2 Guests
+                </span>
               </div>
 
-              <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-lg">
-                <div class="rounded-2xl border border-stone-200 bg-white/85 p-4 shadow-soft">
-                  <div class="text-2xl font-bold text-cabin-forest">4+</div>
-                  <div class="mt-1 text-sm text-stone-600">Comfortable rooms</div>
+              <div class="p-8">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-serif text-2xl font-bold text-stone-900">Standard Double Room</h3>
+                  <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-full">Available</span>
                 </div>
-                <div class="rounded-2xl border border-stone-200 bg-white/85 p-4 shadow-soft">
-                  <div class="text-2xl font-bold text-cabin-forest">Birdlife</div>
-                  <div class="mt-1 text-sm text-stone-600">Natural habitat</div>
-                </div>
-                <div class="rounded-2xl border border-stone-200 bg-white/85 p-4 shadow-soft">
-                  <div class="text-2xl font-bold text-cabin-forest">KSh 5,000</div>
-                  <div class="mt-1 text-sm text-stone-600">Resident rate/night</div>
+                <p class="text-stone-500 text-xs mt-1 font-mono">1 Full Double Bed · Mountain Garden View</p>
+                <p class="text-stone-600 text-sm mt-4 leading-relaxed">
+                  Sunlit primary bedroom featuring a comfortable full bed with full mosquito netting, yellow-framed garden windows, wardrobe space, and direct access to the walk-in hot shower.
+                </p>
+
+                <div class="mt-6 space-y-2 text-xs text-stone-700">
+                  <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Full mosquito net canopy</div>
+                  <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Garden views & morning sunshine</div>
+                  <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> High-speed Wi-Fi included</div>
                 </div>
               </div>
             </div>
 
-            <div class="relative">
-              <div class="rounded-[32px] overflow-hidden shadow-soft border border-stone-200 bg-white">
-                <img
-                  src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80"
-                  alt="Chogoria Cabin exterior"
-                  class="h-[640px] w-full object-cover"
-                />
+            <div class="p-8 pt-0 border-t border-stone-100 mt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div>
+                <span class="text-[11px] text-stone-500 block">Baseline Rate</span>
+                <span class="text-2xl font-extrabold text-cabin-forest">KSh 5,000 / $50</span>
               </div>
-              <div class="absolute -bottom-5 left-5 right-5 rounded-2xl border border-stone-200 bg-white/90 p-4 shadow-soft backdrop-blur-sm">
-                <div class="flex items-center justify-between gap-4">
-                  <div>
-                    <p class="text-[10px] uppercase tracking-[0.22em] text-stone-500">Location</p>
-                    <p class="mt-1 text-sm font-semibold text-cabin-forest">Chogoria, Kenya</p>
+              <div class="flex items-center gap-2 w-full sm:w-auto">
+                <a 
+                  href="https://www.booking.com/hotel/ke/chogoria-cabin.html" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 bg-cabin-bookingBlue hover:bg-cabin-bookingLight text-white text-xs font-bold px-5 py-3 rounded-xl transition-colors uppercase tracking-wider"
+                >
+                  Book on Booking.com
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border-2 border-cabin-gold/50 flex flex-col justify-between relative">
+            <span class="absolute top-4 left-4 z-10 bg-cabin-gold text-stone-950 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+              Family & Groups
+            </span>
+
+            <div>
+              <div class="relative h-64 overflow-hidden bg-stone-200">
+                <img 
+                  src="bedroom-bunks.jpg.jpg" 
+                  alt="Family and Group Room at Chogoria Cabin (1 Full Bed + 1 Bunk Bed)" 
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  onerror="this.src='https://placehold.co/800x500/1B3528/FAF7F2?text=Family+Room';"
+                />
+                <span class="absolute top-4 right-4 bg-white/90 text-stone-900 text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-xs">
+                  1 Full Bed + 1 Bunk Bed · Up to 4-5 Guests
+                </span>
+              </div>
+
+              <div class="p-8">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-serif text-2xl font-bold text-stone-900">Family / Group Room</h3>
+                  <span class="text-xs bg-amber-100 text-amber-800 font-bold px-2.5 py-1 rounded-full">Entire Cabin Setup</span>
+                </div>
+                <p class="text-stone-500 text-xs mt-1 font-mono">1 Full Bed + 1 Sturdy Wooden Bunk Bed</p>
+                <p class="text-stone-600 text-sm mt-4 leading-relaxed">
+                  Ideal for families, trekking groups, or friends exploring Mt. Kenya. Combines the double bedroom with the second bedroom featuring solid wooden bunk beds, plus living lounge and full kitchen.
+                </p>
+
+                <div class="mt-6 space-y-2 text-xs text-stone-700">
+                  <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Sleeps up to 4–5 people comfortably</div>
+                  <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Full self-catering kitchen & stove access</div>
+                  <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Private fenced lawn & balcony</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-8 pt-0 border-t border-stone-100 mt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div>
+                <span class="text-[11px] text-stone-500 block">Entire Cabin Rate</span>
+                <span class="text-2xl font-extrabold text-cabin-gold">KSh 5,000 / $50</span>
+              </div>
+              <div class="flex items-center gap-2 w-full sm:w-auto">
+                <a 
+                  href="https://www.booking.com/hotel/ke/chogoria-cabin.html" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 bg-cabin-bookingBlue hover:bg-cabin-bookingLight text-white text-xs font-bold px-5 py-3 rounded-xl transition-colors uppercase tracking-wider"
+                >
+                  Book on Booking.com
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="payments" class="py-20 bg-white border-y border-stone-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-cabin-wood uppercase text-xs tracking-widest font-bold">Chogoria Cabin Payment Methods</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-cabin-forest mt-2">Direct Local & Card Payments</h2>
+          <p class="mt-4 text-stone-600 text-base">
+            In addition to Booking.com, Chogoria Cabin (operated by Afrocentric Arts & Crafts Enterprise) accepts M-Pesa Buy Goods/Paybill, KCB Bank direct transfers, and major credit cards.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-stone-50 rounded-3xl p-7 border border-stone-200 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-bold text-emerald-800 uppercase tracking-wide">M-PESA / Airtel / Vooma</span>
+                <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded">Instant Mobile</span>
+              </div>
+              <div class="space-y-3 text-xs text-stone-700">
+                <div class="flex items-center justify-between">
+                  <span class="text-stone-500 font-medium">Paybill Number:</span>
+                  <div class="flex items-center gap-1.5">
+                    <span class="font-mono font-bold text-base text-stone-900">522533</span>
+                    <button onclick="copyToClipboard('522533', 'Paybill 522533 copied!')" class="text-[10px] bg-white border border-stone-300 hover:bg-stone-100 px-2 py-1 rounded font-bold">Copy</button>
                   </div>
-                  <div class="text-right">
-                    <p class="text-[10px] uppercase tracking-[0.22em] text-stone-500">Stay</p>
-                    <p class="mt-1 text-sm font-semibold text-cabin-forest">Entire cabin</p>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-stone-500 font-medium">Account Number:</span>
+                  <div class="flex items-center gap-1.5">
+                    <span class="font-mono font-bold text-base text-stone-900">8075179</span>
+                    <button onclick="copyToClipboard('8075179', 'Account 8075179 copied!')" class="text-[10px] bg-white border border-stone-300 hover:bg-stone-100 px-2 py-1 rounded font-bold">Copy</button>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="py-16 md:py-20 bg-white">
-        <div class="section-shell">
-          <div class="flex items-center gap-4 mb-8">
-            <div class="gold-divider"></div>
-            <p class="text-[11px] uppercase tracking-[0.24em] font-semibold text-cabin-gold">The cabin</p>
-          </div>
-
-          <div class="grid lg:grid-cols-[1fr_1.1fr] gap-10 items-center">
-            <div class="space-y-5 text-stone-700 leading-relaxed">
-              <h2 class="font-serif text-4xl md:text-5xl text-cabin-forest">A quiet mountain hideaway with warm local hospitality.</h2>
-              <p>
-                Set on the cool slopes above Chogoria, our rustic cabin is designed for rest, reflection, and easy connection with nature. The mountain air, lush gardens, warm interiors, and peaceful atmosphere create a memorable stay for every guest.
-              </p>
-              <p>
-                Whether you’re looking to enjoy birdwatching, relax with a good view, prepare a meal in the kitchen, or simply slow down away from city noise, Chogoria Cabin gives you the space to breathe deeply and feel at home.
-              </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-4">
-              <div class="rounded-3xl overflow-hidden shadow-soft border border-stone-200 bg-cabin-soft">
-                <img
-                  src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80"
-                  alt="Cabin room"
-                  class="h-72 w-full object-cover"
-                />
-              </div>
-              <div class="rounded-3xl overflow-hidden shadow-soft border border-stone-200 bg-cabin-soft">
-                <img
-                  src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
-                  alt="Cabin exterior"
-                  class="h-72 w-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="amenities" class="py-16 md:py-20 bg-cabin-ivory">
-        <div class="section-shell">
-          <div class="flex items-center gap-4 mb-10">
-            <div class="gold-divider"></div>
-            <p class="text-[11px] uppercase tracking-[0.24em] font-semibold text-cabin-gold">Amenities</p>
-          </div>
-
-          <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-5">
-            <div class="rounded-3xl border border-stone-200 bg-white p-6 shadow-soft hover-lift">
-              <div class="text-3xl mb-3">🌿</div>
-              <h3 class="font-serif text-3xl text-cabin-forest">Garden & forest calm</h3>
-              <p class="mt-3 text-stone-700">Lush greenery and tranquil surroundings for a restful stay.</p>
-            </div>
-            <div class="rounded-3xl border border-stone-200 bg-white p-6 shadow-soft hover-lift">
-              <div class="text-3xl mb-3">🪶</div>
-              <h3 class="font-serif text-3xl text-cabin-forest">Birdwatching</h3>
-              <p class="mt-3 text-stone-700">Wake to birdlife and beautiful natural scenery around the property.</p>
-            </div>
-            <div class="rounded-3xl border border-stone-200 bg-white p-6 shadow-soft hover-lift">
-              <div class="text-3xl mb-3">🍳</div>
-              <h3 class="font-serif text-3xl text-cabin-forest">Fully equipped kitchen</h3>
-              <p class="mt-3 text-stone-700">Cook comfortably at the cabin with practical space to unwind.</p>
-            </div>
-            <div class="rounded-3xl border border-stone-200 bg-white p-6 shadow-soft hover-lift">
-              <div class="text-3xl mb-3">📶</div>
-              <h3 class="font-serif text-3xl text-cabin-forest">Wi‑Fi access</h3>
-              <p class="mt-3 text-stone-700">Stay connected while still enjoying the peaceful mountain setting.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="rates" class="py-16 md:py-20 bg-white">
-        <div class="section-shell">
-          <div class="flex items-center gap-4 mb-10">
-            <div class="gold-divider"></div>
-            <p class="text-[11px] uppercase tracking-[0.24em] font-semibold text-cabin-gold">Rates & stay</p>
-          </div>
-
-          <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-start">
-            <div class="rounded-[32px] border border-stone-200 bg-cabin-cream p-6 md:p-8 shadow-soft">
-              <h3 class="font-serif text-4xl text-cabin-forest">Stay details</h3>
-              <div class="mt-6 grid sm:grid-cols-2 gap-4">
-                <div class="rounded-2xl bg-white p-5 border border-stone-200">
-                  <p class="text-[10px] uppercase tracking-[0.22em] text-stone-500">Residents</p>
-                  <p class="mt-2 text-3xl font-bold text-cabin-forest">KSh 5,000</p>
-                  <p class="mt-2 text-sm text-stone-600">Per night • Entire cabin</p>
-                </div>
-                <div class="rounded-2xl bg-white p-5 border border-stone-200">
-                  <p class="text-[10px] uppercase tracking-[0.22em] text-stone-500">Visitors</p>
-                  <p class="mt-2 text-3xl font-bold text-cabin-forest">$50 USD</p>
-                  <p class="mt-2 text-sm text-stone-600">Per night • Direct booking</p>
-                </div>
-              </div>
-
-              <div class="mt-8 rounded-2xl border border-dashed border-cabin-gold bg-white/60 p-5">
-                <p class="text-[10px] uppercase tracking-[0.2em] text-cabin-gold font-semibold">Payment options</p>
-                <div class="mt-3 space-y-2 text-stone-700">
-                  <p><span class="font-semibold text-cabin-forest">M-Pesa / KCB Paybill:</span> 522533</p>
-                  <p><span class="font-semibold text-cabin-forest">Account no:</span> 8075179</p>
-                  <p><span class="font-semibold text-cabin-forest">Business name:</span> AFROCENTRIC ARTS & CRAFTS ENTERPRISE</p>
+                <div class="pt-2 border-t border-stone-200 text-[11px]">
+                  <span class="text-stone-500 block">Registered Name:</span>
+                  <span class="font-bold text-stone-900">AFROCENTRIC ARTS & CRAFTS ENTERPRISE</span>
                 </div>
               </div>
             </div>
+            <div class="mt-6 pt-4 border-t border-stone-200">
+              <span class="text-[11px] text-stone-500 block mb-2">After paying, confirm via WhatsApp:</span>
+              <a 
+                href="https://wa.me/254724236400?text=Hello%20Chogoria%20Cabin,%20I%20have%20sent%20my%20reservation%20payment%20via%20M-Pesa.%0A-%20Guest%20Name:%20%0A-%20Check-in%20Date:%20%0A-%20M-Pesa%20Code:%20" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold py-2.5 px-4 rounded-xl text-xs uppercase tracking-wider transition-colors shadow-xs"
+              >
+                Send M-Pesa Code on WhatsApp
+              </a>
+            </div>
+          </div>
 
-            <div id="booking-section" class="rounded-[32px] border border-stone-200 bg-cabin-forest p-6 md:p-8 text-white shadow-soft">
-              <p class="text-[10px] uppercase tracking-[0.22em] text-cabin-gold font-semibold">Quick booking</p>
-              <h3 class="mt-3 font-serif text-4xl leading-tight">Book your retreat in minutes.</h3>
-
-              <div class="mt-6 space-y-3 text-sm text-stone-200">
-                <p>Send your preferred dates and guest count on WhatsApp.</p>
-                <p>We’ll confirm availability and payment instructions.</p>
-                <p>Secure your stay via M-Pesa or bank transfer.</p>
+          <div class="bg-stone-50 rounded-3xl p-7 border border-stone-200 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-bold text-stone-800 uppercase tracking-wide">KCB Bank Transfer</span>
+                <span class="text-[10px] bg-blue-100 text-blue-800 font-bold px-2 py-0.5 rounded">PesaLink / EFT / RTGS</span>
               </div>
-
-              <div class="mt-8 flex flex-col gap-3">
-                <a
-                  href="https://wa.me/254724236400?text=Hello%20Chogoria%20Cabin%2C%20I%20would%20like%20to%20book%20a%20stay.%20Please%20share%20availability%20and%20rates."
-                  class="inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-cabin-forest hover:bg-cabin-gold hover:text-white transition-colors"
-                >
-                  Book with WhatsApp
-                </a>
-                <a
-                  href="https://www.booking.com/hotel/ke/chogoria-cabin.html"
-                  target="_blank"
-                  rel="noopener"
-                  class="inline-flex items-center justify-center rounded-full border border-cabin-gold px-5 py-3 text-sm font-semibold text-white hover:bg-cabin-gold hover:text-white transition-colors"
-                >
-                  Reserve on Booking.com
-                </a>
+              <div class="space-y-3 text-xs text-stone-700">
+                <div class="flex items-center justify-between">
+                  <span class="text-stone-500 font-medium">Bank:</span>
+                  <span class="font-bold text-stone-900">KCB Bank</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-stone-500 font-medium">Account Number:</span>
+                  <div class="flex items-center gap-1.5">
+                    <span class="font-mono font-bold text-sm text-stone-900">1350453021</span>
+                    <button onclick="copyToClipboard('1350453021', 'KCB Account 1350453021 copied!')" class="text-[10px] bg-white border border-stone-300 hover:bg-stone-100 px-2 py-1 rounded font-bold">Copy</button>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-stone-200 text-[11px]">
+                  <span class="text-stone-500 block">Account Name:</span>
+                  <span class="font-bold text-stone-900">Afrocentric Arts & Crafts Enterprise</span>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="py-16 md:py-20 bg-cabin-ivory">
-        <div class="section-shell">
-          <div class="flex items-center gap-4 mb-8">
-            <div class="gold-divider"></div>
-            <p class="text-[11px] uppercase tracking-[0.24em] font-semibold text-cabin-gold">Photo gallery</p>
-          </div>
-          <div class="grid md:grid-cols-3 gap-5">
-            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Cabin exterior view" class="h-80 w-full object-cover rounded-[28px] shadow-soft" />
-            <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" alt="Cabin room" class="h-80 w-full object-cover rounded-[28px] shadow-soft" />
-            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80" alt="Scenic valley and mountain view" class="h-80 w-full object-cover rounded-[28px] shadow-soft" />
-          </div>
-        </div>
-      </section>
-
-      <section id="reviews" class="py-16 md:py-20 bg-white">
-        <div class="section-shell">
-          <div class="flex items-center gap-4 mb-10">
-            <div class="gold-divider"></div>
-            <p class="text-[11px] uppercase tracking-[0.24em] font-semibold text-cabin-gold">Guest reviews</p>
-          </div>
-
-          <div class="grid md:grid-cols-3 gap-5">
-            <div class="rounded-[28px] border border-stone-200 bg-cabin-cream p-6 shadow-soft">
-              <div class="review-stars text-cabin-gold text-xl">★★★★★</div>
-              <p class="mt-4 text-stone-700 leading-relaxed">“Beautiful and peaceful. The surrounding birdlife and warm environment made it feel like a real getaway.”</p>
-              <p class="mt-5 text-sm font-semibold text-cabin-forest">— Guest review</p>
-            </div>
-            <div class="rounded-[28px] border border-stone-200 bg-cabin-cream p-6 shadow-soft">
-              <div class="review-stars text-cabin-gold text-xl">★★★★★</div>
-              <p class="mt-4 text-stone-700 leading-relaxed">“Very comfortable, quiet, and well-kept. Ideal for a calm stay near Mt. Kenya.”</p>
-              <p class="mt-5 text-sm font-semibold text-cabin-forest">— Guest review</p>
-            </div>
-            <div class="rounded-[28px] border border-stone-200 bg-cabin-cream p-6 shadow-soft">
-              <div class="review-stars text-cabin-gold text-xl">★★★★★</div>
-              <p class="mt-4 text-stone-700 leading-relaxed">“Amazing host, lovely views, and the cabin was just what we needed for a restful break.”</p>
-              <p class="mt-5 text-sm font-semibold text-cabin-forest">— Guest review</p>
+            <div class="mt-6 pt-4 border-t border-stone-200">
+              <span class="text-[11px] text-stone-500 block mb-2">Direct bank confirmation:</span>
+              <a 
+                href="https://wa.me/254724236400?text=Hello%20Chogoria%20Cabin,%20I%20have%20completed%20a%20KCB%20Bank%20Transfer%20for%20my%20reservation." 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="w-full inline-flex items-center justify-center gap-2 bg-cabin-forest hover:bg-cabin-forestLight text-white font-bold py-2.5 px-4 rounded-xl text-xs uppercase tracking-wider transition-colors shadow-xs"
+              >
+                Send Bank Slip on WhatsApp
+              </a>
             </div>
           </div>
-        </div>
-      </section>
 
-      <section class="py-16 md:py-20 bg-cabin-forest text-white">
-        <div class="section-shell grid lg:grid-cols-[1.15fr_0.85fr] gap-8 items-center">
-          <div>
-            <p class="text-[11px] uppercase tracking-[0.24em] text-cabin-gold font-semibold">Location</p>
-            <h3 class="mt-4 font-serif text-4xl md:text-5xl">Find us in Chogoria, Kenya.</h3>
-            <p class="mt-4 text-stone-200 max-w-xl">
-              Chogoria is a peaceful gateway into the Mt. Kenya region, known for lush scenery, birdlife, and warm local hospitality.
-            </p>
-            <a
-              href="https://maps.app.goo.gl/oppzrdvy1RZucp4a9"
-              target="_blank"
-              rel="noopener"
-              class="mt-6 inline-flex items-center justify-center rounded-full bg-cabin-gold px-6 py-3 text-sm font-semibold text-white hover:bg-cabin-goldHover transition-colors"
-            >
-              Open Google Maps
+          <div class="bg-stone-50 rounded-3xl p-7 border border-stone-200 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-bold text-cabin-bookingBlue uppercase tracking-wide">Visa & Mastercard</span>
+                <span class="text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded">International Cards</span>
+              </div>
+              <div class="space-y-3 text-xs text-stone-700">
+                <p class="leading-relaxed">
+                  International credit and debit cards (Visa, Mastercard, American Express) are processed securely through our verified Booking.com integration.
+                </p>
+                <div class="flex items-center gap-2 pt-2">
+                  <span class="px-2 py-1 bg-white border border-stone-300 rounded text-[10px] font-bold text-blue-900">VISA</span>
+                  <span class="px-2 py-1 bg-white border border-stone-300 rounded text-[10px] font-bold text-red-600">Mastercard</span>
+                  <span class="px-2 py-1 bg-white border border-stone-300 rounded text-[10px] font-bold text-emerald-700">M-PESA</span>
+                </div>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-stone-200">
+              <span class="text-[11px] text-stone-500 block mb-2">Book with card protection:</span>
+              <a 
+                href="https://www.booking.com/hotel/ke/chogoria-cabin.html" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="w-full inline-flex items-center justify-center gap-2 bg-cabin-bookingBlue hover:bg-cabin-bookingLight text-white font-bold py-2.5 px-4 rounded-xl text-xs uppercase tracking-wider transition-colors shadow-xs"
+              >
+                Pay by Card on Booking.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="video-tour" class="py-20 bg-cabin-forest text-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-cabin-gold uppercase text-xs tracking-widest font-bold">Watch Video Tour</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-2">Highland Birdlife & Balcony Views</h2>
+          <p class="mt-4 text-stone-300 text-sm leading-relaxed">
+            Listen to singing birds and take in the panoramic veranda vista overlooking the lush Chogoria valley and banana farms.
+          </p>
+        </div>
+
+        <div class="bg-stone-900 rounded-3xl overflow-hidden shadow-2xl border border-white/20 max-w-4xl mx-auto relative">
+          <video 
+            controls 
+            playsinline 
+            poster="exterior.jpg.jpg"
+            class="w-full max-h-[500px] object-cover bg-black"
+          >
+            <source src="cabin-birds.mp4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="p-6 bg-cabin-forestLight/90 backdrop-blur-md flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <h4 class="font-serif text-lg font-bold text-cabin-gold">A Birdwatcher's Morning at Chogoria Cabin</h4>
+              <p class="text-xs text-stone-300 mt-1">Footage captured directly around Chogoria Cabin: Barbets, Bulbuls, Kingfishers, and peaceful mountain air.</p>
+            </div>
+            <a href="https://wa.me/254724236400?text=Hello%20Chogoria%20Cabin,%20I%20saw%20your%20video%20and%20would%20love%20to%20visit!" target="_blank" rel="noopener noreferrer" class="shrink-0 bg-cabin-gold hover:bg-cabin-goldHover text-stone-950 font-bold px-5 py-2.5 rounded-full text-xs uppercase tracking-wider transition-colors">
+              Enquire on WhatsApp
             </a>
           </div>
-
-          <div class="rounded-[30px] overflow-hidden border border-white/15 shadow-soft map-placeholder min-h-[320px]">
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer id="contact" class="bg-cabin-charcoal text-stone-200">
-      <div class="section-shell py-12">
-        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
-          <div>
-            <p class="font-serif text-4xl text-white">Afrocentric Arts & Crafts</p>
-            <p class="mt-3 text-stone-300">Chogoria Cabin • On the Slopes of Mt. Kenya</p>
-          </div>
-
-          <div class="grid sm:grid-cols-2 gap-8 text-sm">
-            <div>
-              <p class="text-[10px] uppercase tracking-[0.22em] text-cabin-gold mb-3">Contact</p>
-              <p>Phone: <a href="tel:+254724236400" class="hover:text-white transition-colors">0724 236 400</a></p>
-              <p>Email: <a href="mailto:chogoriacabin@gmail.com" class="hover:text-white transition-colors">chogoriacabin@gmail.com</a></p>
-            </div>
-            <div>
-              <p class="text-[10px] uppercase tracking-[0.22em] text-cabin-gold mb-3">Booking</p>
-              <p>WhatsApp: <a href="https://wa.me/254724236400" class="hover:text-white transition-colors">+254 724 236 400</a></p>
-              <p>Booking.com: <a href="https://www.booking.com/hotel/ke/chogoria-cabin.html" class="hover:text-white transition-colors">Reserve now</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-8 border-t border-white/10 pt-6 text-xs text-stone-400">
-          © 2026 Afrocentric Arts and Crafts • Chogoria Cabin
         </div>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <section id="reviews" class="py-20 bg-cabin-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white shadow-xs border border-stone-200 mb-4">
+            <svg class="w-4 h-4" viewBox="0 0 24 24">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+            </svg>
+            <span class="text-xs font-bold text-stone-800">5.0 Star Rating on Google Maps</span>
+            <span class="text-amber-500 font-bold">★★★★★</span>
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-cabin-forest">What Guests Say About Chogoria Cabin</h2>
+          <p class="mt-3 text-stone-600 text-sm">Real reviews from long-stay writers, international hikers, and mountain travelers.</p>
+
+          <div class="mt-4">
+            <a href="https://maps.app.goo.gl/oppzrdvy1RZucp4a9" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-cabin-wood font-bold hover:underline">
+              <span>Read or leave a review on Google Maps</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow border-2 border-cabin-gold/40 flex flex-col justify-between relative">
+            <span class="absolute top-4 right-4 bg-cabin-gold/20 text-cabin-wood text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full">
+              Featured Guest
+            </span>
+            <div>
+              <div class="flex text-amber-500 text-sm mb-3">★★★★★</div>
+              <h4 class="font-serif text-lg font-bold text-stone-900 leading-snug">
+                "Three sublime months in Chogoria..."
+              </h4>
+              <p class="text-stone-600 text-xs mt-3 leading-relaxed">
+                "Sitting with a cuppa on the balcony listening to birds sing, gazing across the valley at the farms nestled amongst towering oaks, banana and mango trees. The cabin is cosy, with a hot walk-in shower and good internet for remote work."
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div>
+                <h5 class="font-bold text-stone-900 text-xs">Diane Priestley</h5>
+                <p class="text-[11px] text-stone-500">UK Journalist · 3-Month Stay</p>
+              </div>
+              <button onclick="openFullReviewModal()" class="text-xs font-bold text-cabin-forest hover:text-cabin-wood underline">
+                Read Full
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow border border-stone-200 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[10px] bg-blue-50 text-blue-700 font-semibold px-2 py-0.5 rounded">Verified Stay</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-stone-900 leading-snug">
+                "Perfect break from the city & Mt. Kenya base"
+              </h4>
+              <p class="text-stone-600 text-xs mt-3 leading-relaxed">
+                "We felt warmly welcomed from the minute we arrived. The cabin was clean, quiet, and peaceful. We used it as our launchpad for trekking the Mount Kenya Chogoria route. Having hot showers and a full kitchen to cook breakfast was unbeatable."
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div>
+                <h5 class="font-bold text-stone-900 text-xs">David K. & Group</h5>
+                <p class="text-[11px] text-stone-500">Mt. Kenya Hikers</p>
+              </div>
+              <span class="text-emerald-700 text-xs font-bold">10/10 Rating</span>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-md transition-shadow border border-stone-200 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <div class="flex text-amber-500 text-sm">★★★★★</div>
+                <span class="text-[10px] bg-blue-50 text-blue-700 font-semibold px-2 py-0.5 rounded">Google Review</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-stone-900 leading-snug">
+                "Responsive host, fast Wi-Fi and fresh nature"
+              </h4>
+              <p class="text-stone-600 text-xs mt-3 leading-relaxed">
+                "Very attentive management that made sure I had everything I needed. The Wi-Fi was strong enough for video calls on my laptop, and waking up to the sounds of barbets and kingfishers in the garden was truly refreshing."
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
+              <div>
+                <h5 class="font-bold text-stone-900 text-xs">Catherine M.</h5>
+                <p class="text-[11px] text-stone-500">Remote Worker · Solo Guest</p>
+              </div>
+              <span class="text-emerald-700 text-xs font-bold">5.0 ★ Google</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="py-20 bg-cabin-ivory">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <span class="text-cabin-wood uppercase text-xs tracking-widest font-bold">Real Property Photos</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold text-cabin-forest mt-2">Inside Chogoria Cabin</h2>
+          </div>
+          <p class="mt-4 md:mt-0 text-stone-600 text-sm max-w-md">
+            Click on any photo to inspect larger view. Actual unedited photos of the bedrooms, kitchen, living spaces, and gardens.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          <div class="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-lg transition-all" onclick="openLightbox(0)">
+            <img src="exterior.jpg.jpg" alt="Cabin exterior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x600/1B3528/FFF?text=Exterior';">
+            <div class="absolute inset-0 bg-cabin-forest/20 group-hover:bg-cabin-forest/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100"><span class="text-white text-xs font-medium uppercase tracking-wider bg-black/60 px-3 py-1.5 rounded-full backdrop-blur-xs">Enlarge</span></div>
+          </div>
+          <div class="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-lg transition-all" onclick="openLightbox(1)">
+            <img src="bedroom-double.jpg.jpg" alt="Standard Double Room with mosquito net" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x600/1B3528/FFF?text=Double+Room';">
+            <div class="absolute inset-0 bg-cabin-forest/20 group-hover:bg-cabin-forest/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100"><span class="text-white text-xs font-medium uppercase tracking-wider bg-black/60 px-3 py-1.5 rounded-full backdrop-blur-xs">Enlarge</span></div>
+          </div>
+          <div class="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-lg transition-all" onclick="openLightbox(2)">
+            <img src="bedroom-bunks.jpg.jpg" alt="Second bedroom with bunk beds" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x600/1B3528/FFF?text=Bunks';">
+            <div class="absolute inset-0 bg-cabin-forest/20 group-hover:bg-cabin-forest/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100"><span class="text-white text-xs font-medium uppercase tracking-wider bg-black/60 px-3 py-1.5 rounded-full backdrop-blur-xs">Enlarge</span></div>
+          </div>
+          <div class="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-lg transition-all" onclick="openLightbox(3)">
+            <img src="living-room.jpg.jpg" alt="Living room and lounge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x600/1B3528/FFF?text=Living+Room';">
+            <div class="absolute inset-0 bg-cabin-forest/20 group-hover:bg-cabin-forest/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100"><span class="text-white text-xs font-medium uppercase tracking-wider bg-black/60 px-3 py-1.5 rounded-full backdrop-blur-xs">Enlarge</span></div>
+          </div>
+          <div class="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-lg transition-all" onclick="openLightbox(4)">
+            <img src="kitchen.jpg.jpg" alt="Equipped self-catering kitchen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x600/1B3528/FFF?text=Kitchen';">
+            <div class="absolute inset-0 bg-cabin-forest/20 group-hover:bg-cabin-forest/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100"><span class="text-white text-xs font-medium uppercase tracking-wider bg-black/60 px-3 py-1.5 rounded-full backdrop-blur-xs">Enlarge</span></div>
+          </div>
+          <div class="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-lg transition-all" onclick="openLightbox(5)">
+            <img src="garden.jpg.jpg" alt="Lush green garden and private lawn" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x600/1B3528/FFF?text=Garden';">
+            <div class="absolute inset-0 bg-cabin-forest/20 group-hover:bg-cabin-forest/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100"><span class="text-white text-xs font-medium uppercase tracking-wider bg-black/60 px-3 py-1.5 rounded-full backdrop-blur-xs">Enlarge</span></div>
+          </div>
+          <div class="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-lg transition-all" onclick="openLightbox(6)">
+            <img src="bathroom.jpg.jpg" alt="Bathroom washbasin and mirror" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x600/1B3528/FFF?text=Bathroom';">
+            <div class="absolute inset-0 bg-cabin-forest/20 group-hover:bg-cabin-forest/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100"><span class="text-white text-xs font-medium uppercase tracking-wider bg-black/60 px-3 py-1.5 rounded-full backdrop-blur-xs">Enlarge</span></div>
+          </div>
+          <div class="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-lg transition-all" onclick="openLightbox(7)">
+            <img src="tree-shelf.jpg.jpg" alt="Handcrafted tree-trunk corner shelf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x600/1B3528/FFF?text=Tree+Shelf';">
+            <div class="absolute inset-0 bg-cabin-forest/20 group-hover:bg-cabin-forest/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100"><span class="text-white text-xs font-medium uppercase tracking-wider bg-black/60 px-3 py-1.5 rounded-full backdrop-blur-xs">Enlarge</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="location" class="py-20 bg-cabin-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-5">
+            <span class="text-cabin-wood uppercase text-xs tracking-widest font-bold">Directions & Location</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-cabin-forest mt-2">Getting to Chogoria Cabin</h2>
+            <p class="mt-4 text-stone-600 text-sm leading-relaxed">
+              Located on the slopes of Mt. Kenya in Chogoria, Tharaka-Nithi County, Kenya. Nestled quietly off the highway with safe access, peaceful valleys, and neighboring farms.
+            </p>
+            <div class="mt-8 space-y-4">
+              <div class="p-4 bg-white rounded-xl border border-stone-200 shadow-xs">
+                <span class="text-xs uppercase font-bold text-cabin-forest">Address & Region</span>
+                <p class="text-stone-800 text-sm font-medium mt-1">Chogoria, Tharaka-Nithi County, Kenya</p>
+                <p class="text-stone-500 text-xs mt-1">Directly accessible via town boda boda or vehicle</p>
+              </div>
+              <div class="p-4 bg-white rounded-xl border border-stone-200 shadow-xs">
+                <span class="text-xs uppercase font-bold text-cabin-forest">Direct Contact</span>
+                <p class="text-stone-800 text-sm font-medium mt-1 font-bold">Chogoria Cabin</p>
+                <p class="text-stone-600 text-xs mt-0.5">Operated by Afrocentric Arts and Crafts</p>
+                <p class="text-cabin-forest font-bold text-sm mt-1">Phone / WhatsApp: 0724 236 400</p>
+                <p class="text-stone-600 text-xs mt-0.5">Email: chogoriacabin@gmail.com</p>
+              </div>
+              <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                <a 
+                  href="https://maps.app.goo.gl/oppzrdvy1RZucp4a9" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="flex-1 inline-flex items-center justify-center gap-2 bg-cabin-forest text-white text-xs font-bold uppercase tracking-wider py-3.5 px-4 rounded-xl hover:bg-cabin-forestLight transition-colors shadow-sm"
+                >
+                  <svg class="w-4 h-4 text-cabin-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                  Open in Google Maps
+                </a>
+                <button 
+                  onclick="copyPageUrl()" 
+                  class="flex-1 inline-flex items-center justify-center gap-2 bg-stone-200 text-stone-800 text-xs font-bold uppercase tracking-wider py-3.5 px-4 rounded-xl hover:bg-stone-300 transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                  Share Website
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <div class="w-full h-full min-h-[380px] bg-stone-200 rounded-3xl overflow-hidden relative shadow-inner border border-stone-300 flex flex-col items-center justify-center p-6 text-center">
+              <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#1B3528_1px,transparent_1px)] [background-size:16px_16px]"></div>
+              <div class="relative z-10 max-w-md bg-white/95 backdrop-blur-md p-8 rounded-2xl shadow-xl border border-white">
+                <div class="w-14 h-14 bg-cabin-forest text-cabin-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
+                  <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-cabin-forest">Verified Location on Google Maps</h3>
+                <p class="text-stone-600 text-xs mt-2 leading-relaxed">
+                  Pinpoint location verified in Chogoria on the slopes of Mt. Kenya. Click the button below to view accurate driving and walking directions directly on Google Maps.
+                </p>
+                <div class="mt-5">
+                  <a href="https://maps.app.goo.gl/oppzrdvy1RZucp4a9" target="_blank" rel="noopener noreferrer" class="inline-block bg-cabin-gold text-stone-950 text-xs font-bold px-6 py-2.5 rounded-full uppercase tracking-wider hover:bg-cabin-goldHover transition-colors">
+                    View on Google Maps →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-cabin-forest text-white py-16 border-t border-cabin-gold/30">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold">Ready to Experience Chogoria Cabin?</h2>
+        <p class="mt-4 text-stone-200 text-base max-w-xl mx-auto font-light">
+          Chogoria Cabin (by Afrocentric Arts and Crafts). Whether booking on Booking.com, planning via WhatsApp, or paying via M-Pesa, we look forward to hosting you. Karibu!
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a 
+            href="https://www.booking.com/hotel/ke/chogoria-cabin.html" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 bg-cabin-bookingLight hover:bg-cabin-bookingBlue text-white font-bold px-8 py-4 rounded-full text-sm uppercase tracking-wider transition-all shadow-lg hover:scale-105"
+          >
+            Check Real-Time Rates & Availability on Booking.com
+          </a>
+          <a 
+            href="https://wa.me/254724236400?text=Hello%20Chogoria%20Cabin,%20I%20am%20ready%20to%20book%20my%20stay." 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="inline-flex items-center gap-2 bg-cabin-gold hover:bg-cabin-goldHover text-stone-950 font-bold px-8 py-4 rounded-full text-sm uppercase tracking-wider transition-all shadow-lg hover:scale-105"
+          >
+            Chat with Us on WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-black text-stone-400 py-12 border-t border-stone-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div class="space-y-3">
+          <h4 class="font-serif text-xl text-white font-bold tracking-wider">CHOGORIA CABIN</h4>
+          <p class="text-stone-300 font-semibold text-xs -mt-1">By Afrocentric Arts and Crafts</p>
+          <p class="text-stone-400 leading-relaxed text-xs">
+            A peaceful retreat on the slopes of Mt. Kenya, Chogoria, Tharaka-Nithi County, Kenya. Natural tranquility, birdwatching, and mountain peace.
+          </p>
+        </div>
+        <div>
+          <h5 class="text-white font-semibold uppercase tracking-wider text-xs mb-3">Quick Links</h5>
+          <ul class="space-y-2">
+            <li><a href="#home" class="hover:text-cabin-gold transition-colors">Home</a></li>
+            <li><a href="#booking-section" class="hover:text-cabin-bookingLight transition-colors font-semibold">Booking.com Listing</a></li>
+            <li><a href="#rooms" class="hover:text-cabin-gold transition-colors">Room Types</a></li>
+            <li><a href="#video-tour" class="hover:text-cabin-gold transition-colors">Video Tour</a></li>
+            <li><a href="#payments" class="hover:text-cabin-gold transition-colors">Payment Options</a></li>
+            <li><a href="#reviews" class="hover:text-cabin-gold transition-colors">Guest Reviews</a></li>
+            <li><a href="#location" class="hover:text-cabin-gold transition-colors">Location & Map</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-white font-semibold uppercase tracking-wider text-xs mb-3">Rates & Channels</h5>
+          <p class="text-stone-300">Standard Double & Family Rooms</p>
+          <p class="text-cabin-gold mt-1">Residents: KSh 5,000 · Non-Residents: $50 USD</p>
+          <p class="text-stone-400 mt-1">M-Pesa Paybill / Bank Transfers / Visa</p>
+          <p class="text-emerald-400 mt-1">Listed on Booking.com</p>
+        </div>
+        <div>
+          <h5 class="text-white font-semibold uppercase tracking-wider text-xs mb-3">Contact & Reservations</h5>
+          <p class="text-stone-200 font-bold">Chogoria Cabin</p>
+          <p class="text-stone-400 text-[11px]">Operated by Afrocentric Arts and Crafts</p>
+          <p class="text-stone-300 font-mono mt-1">Phone / WhatsApp: 0724 236 400</p>
+          <p class="text-stone-300 mt-1 font-mono">Email: chogoriacabin@gmail.com</p>
+          <p class="text-stone-400 mt-1">Chogoria, Tharaka-Nithi, Kenya</p>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-stone-900 text-center text-stone-500 text-[11px] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>© <span id="currentYear"></span> Chogoria Cabin · Afrocentric Arts and Crafts. All rights reserved.</p>
+        <p class="text-stone-500">Booking.com Certified · M-Pesa & KCB Bank Integrated</p>
+      </div>
+    </div>
+  </footer>
+
+  <a 
+    href="https://wa.me/254724236400?text=Hello%20Chogoria%20Cabin,%20I%20am%20interested%20in%20booking%20a%20stay." 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    aria-label="Chat with Chogoria Cabin on WhatsApp"
+    class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba59] text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 focus:outline-none"
+  >
+    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.297.144.35.49 1.199.534 1.286.044.087.073.189.014.305-.058.115-.088.19-.174.29-.087.101-.183.226-.262.304-.087.087-.179.183-.077.358.101.174.451.745.968 1.206.666.594 1.228.777 1.402.864.174.088.276.073.378-.044.102-.116.434-.506.55-.68.116-.174.232-.145.39-.087s1.011.477 1.184.564.29.13.333.203c.043.072.043.42-.101.825z"/></svg>
+  </a>
+
+  <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl font-light hover:text-cabin-gold focus:outline-none">&times;</button>
+    <img id="lightboxImg" src="" alt="Enlarged cabin photo" class="max-w-full max-h-[85vh] rounded-xl shadow-2xl object-contain" />
+  </div>
+
+  <div id="reviewModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl max-h-[90vh] overflow-y-auto relative">
+      <button onclick="closeFullReviewModal()" class="absolute top-5 right-5 text-stone-500 hover:text-stone-900 text-2xl leading-none">&times;</button>
+      <span class="text-cabin-gold text-xs font-bold uppercase tracking-widest block">Complete Unedited Review</span>
+      <h3 class="font-serif text-2xl font-bold text-stone-900 mt-1">Review of Chogoria Cabin, Kenya</h3>
+      <p class="text-xs text-stone-500 font-mono mt-0.5">By Diane Priestley · UK Journalist</p>
+      <div class="mt-4 space-y-3 text-xs sm:text-sm text-stone-700 leading-relaxed">
+        <p>I had a delightful stay in this tranquil, rustic guesthouse in the lush, tropical forest for three sublime months, escaping the bleak English winter.</p>
+        <p>My favourite thing was sitting with a cuppa on the balcony in the gentle sunshine, listening to the birds sing, while gazing across the valley at the farms nestled amongst towering oaks, and banana and mango trees.</p>
+        <p>Past a canopy of crimson bougainvillea, the farm is right next door. I discovered that my host was extremely helpful sharing extensive knowledge of the region.</p>
+        <p>I loved strolling into the vibrant markets to buy fresh fruit and veggies from the friendly locals and then jumping on a Boda Boda (motorbike taxi) for an exhilarating ride home.</p>
+        <p>The house is cosy and comfortable for one guest, a couple, a family or group of friends. With a large furnished double bedroom and second bedroom with bunks, there is plenty of sleeping space. And a nice hot shower in a walk-in shower room, two hand basins and flushing toilet.</p>
+        <p>The kitchen is fully equipped and has a small fridge and stove-top for cooking. I devoured super healthy tropical food fresh from nature and felt so revitalised.</p>
+        <p>The lounge room is relaxing with space for a desk with good internet for your laptop and phone.</p>
+        <p>The front and back gardens are bursting with flowers, vegetables and herbs and the property is well-fenced for security and privacy.</p>
+        <p>I recommend the guesthouse to anyone seeking a natural retreat from the pressures of hectic city life or travellers in Kenya needing peaceful respite between adventures. You will be made warmly welcome. Karibu.</p>
+      </div>
+      <div class="mt-6 pt-4 border-t border-stone-200 flex justify-end">
+        <button onclick="closeFullReviewModal()" class="bg-cabin-forest text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-cabin-forestLight transition-colors">
+          Close Review
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-stone-900 text-white text-xs px-5 py-3 rounded-full shadow-2xl transition-opacity duration-300 opacity-0 pointer-events-none">
+    Copied to clipboard!
+  </div>
+
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function toggleMobileMenu() {
+      mobileMenu.classList.toggle('hidden');
+    }
+    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+    const galleryImages = [
+      "exterior.jpg.jpg",
+      "bedroom-double.jpg.jpg",
+      "bedroom-bunks.jpg.jpg",
+      "living-room.jpg.jpg",
+      "kitchen.jpg.jpg",
+      "garden.jpg.jpg",
+      "bathroom.jpg.jpg",
+      "tree-shelf.jpg.jpg"
+    ];
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    function openLightbox(index) {
+      lightboxImg.src = galleryImages[index];
+      lightbox.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.add('hidden');
+      lightboxImg.src = '';
+      document.body.style.overflow = '';
+    }
+
+    const reviewModal = document.getElementById('reviewModal');
+    function openFullReviewModal() {
+      reviewModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeFullReviewModal() {
+      reviewModal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeLightbox();
+        closeFullReviewModal();
+      }
+    });
+
+    function copyToClipboard(text, message) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(message || 'Copied to clipboard!');
+      });
+    }
+
+    function copyPageUrl() {
+      if (navigator.share) {
+        navigator.share({
+          title: "Chogoria Cabin — By Afrocentric Arts and Crafts",
+          text: "Check out Chogoria Cabin on the slopes of Mt. Kenya!",
+          url: window.location.href
+        }).catch(() => {});
+      } else {
+        copyToClipboard(window.location.href, 'Website link copied to clipboard!');
+      }
+    }
+
+    function showToast(text) {
+      const toast = document.getElementById('toast');
+      toast.textContent = text;
+      toast.classList.remove('opacity-0');
+      toast.classList.add('opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0');
+      }, 3000);
+    }
+  </script>
+</body>
 </html>
