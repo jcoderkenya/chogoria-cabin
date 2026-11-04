@@ -3,12 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="refresh" content="0; url=index.html.html" />
-  <link rel="canonical" href="index.html.html" />
   <title>Chogoria Cabin</title>
-  <script>window.location.replace('index.html.html');</script>
 </head>
 <body>
-  <p>Redirecting to <a href="index.html.html">Chogoria Cabin</a>…</p>
+  <p id="status">Loading Chogoria Cabin…</p>
+  <script>
+    const assetPaths = {
+      'images/exterior.jpg': 'exterior.jpg.jpg',
+      'images/bedroom-double.jpg': 'bedroom-double.jpg.jpg',
+      'images/bedroom-bunks.jpg': 'bedroom-bunks.jpg.jpg',
+      'images/living-room.jpg': 'living-room.jpg.jpg',
+      'images/kitchen.jpg': 'kitchen.jpg.jpg',
+      'images/garden.jpg': 'garden.jpg.jpg',
+      'images/bathroom.jpg': 'bathroom.jpg.jpg',
+      'images/tree-shelf.jpg': 'tree-shelf.jpg.jpg',
+      'video/cabin-birds.mp4': 'cabin-birds.mp4.mp4'
+    };
+
+    fetch('index.html.html')
+      .then((response) => {
+        if (!response.ok) throw new Error('Could not load the cabin page.');
+        return response.text();
+      })
+      .then((html) => {
+        for (const [missingPath, actualPath] of Object.entries(assetPaths)) {
+          html = html.replaceAll(missingPath, actualPath);
+        }
+        document.open();
+        document.write(html);
+        document.close();
+      })
+      .catch((error) => {
+        document.getElementById('status').textContent = error.message;
+      });
+  </script>
 </body>
 </html>
