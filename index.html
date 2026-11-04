@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chogoria Cabin</title>
+  <meta name="robots" content="index,follow" />
+  <title>Chogoria Cabin | Afrocentric Arts and Crafts</title>
 </head>
 <body>
   <p id="status">Loading Chogoria Cabin…</p>
   <script>
+    const sourceUrl = 'https://raw.githubusercontent.com/jcoderkenya/chogoria-cabin/0d7db8aaf6f98013087bb09233cbb36dcb87499b/index.html.html';
     const assetPaths = {
       'images/exterior.jpg': 'exterior.jpg.jpg',
       'images/bedroom-double.jpg': 'bedroom-double.jpg.jpg',
@@ -20,9 +22,9 @@
       'video/cabin-birds.mp4': 'cabin-birds.mp4.mp4'
     };
 
-    fetch('index.html.html')
+    fetch(sourceUrl)
       .then((response) => {
-        if (!response.ok) throw new Error('Could not load the cabin page.');
+        if (!response.ok) throw new Error('Could not load the cabin page. Please try again shortly.');
         return response.text();
       })
       .then((html) => {
